@@ -76,6 +76,27 @@ void deposit() {
     }
 
 
+
+    void withdraw() {
+        double amount;
+        cout << "\nEnter amount to withdraw: $";
+        cin >> amount;
+
+        if (amount <= 0) {
+            cout << "Invalid amount. Withdrawal canceled.\n";
+        } else if (amount > balance) {
+            cout << "Insufficient funds. Withdrawal canceled.\n";
+        } else {
+            balance -= amount;
+            cout << "Withdrawal successful!\n";
+            cout << "Remaining balance: $" << balance << "\n";
+        }
+        cout << "Press enter to continue...";
+        cin.ignore();
+        cin.get();
+    }
+
+
 };
 
 
