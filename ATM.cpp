@@ -49,11 +49,12 @@ void showMenu() {
         cout << "====================\n";
     }
 
-
-
-
-
-
+void checkBalance() {
+        cout << "\nYour current balance is: $" << balance << "\n";
+        cout << "Press enter to continue...";
+        cin.ignore();
+        cin.get();
+    }
 
 
 
