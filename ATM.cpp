@@ -4,7 +4,16 @@ using namespace std;
 
 
 
+class ATM {
+private:
+    string correctPIN;
+    double balance;
 
+public:
+    ATM(string pin, double initialBalance) {
+        correctPIN = pin;
+        balance = initialBalance;
+    }
 
 
 
