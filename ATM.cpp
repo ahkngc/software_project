@@ -35,6 +35,21 @@ bool login() {
         return false;
     }
 
+
+
+
+void showMenu() {
+        cout << "\n====================\n";
+        cout << "        ATM MENU\n";
+        cout << "====================\n";
+        cout << "1. Check Balance\n";
+        cout << "2. Deposit\n";
+        cout << "3. Withdraw\n";
+        cout << "4. Exit\n";
+        cout << "====================\n";
+    }
+
+
 }
 
 
