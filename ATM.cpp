@@ -16,9 +16,26 @@ public:
     }
 
 
+bool login() {
+        string enteredPIN;
+        int attempts = 3;
+        while (attempts > 0) {
+            cout << "Enter your PIN: ";
+            cin >> enteredPIN;
 
+            if (enteredPIN == correctPIN) {
+                cout << "\nLogin successful!\n";
+                return true;
+            } else {
+                attempts--;
+                cout << "Incorrect PIN. Attempts left: " << attempts << "\n";
+            }
+        }
+        cout << "You have entered wrong PIN 3 times. Exiting...\n";
+        return false;
+    }
 
-
+}
 
 
 
