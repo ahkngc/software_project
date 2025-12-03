@@ -97,6 +97,44 @@ void deposit() {
     }
 
 
+void run() {
+        if (!login()) {
+            return;
+        }
+
+        int choice = 0;
+        do {
+            showMenu();
+            cout << "Enter your choice (1-4): ";
+            cin >> choice;
+
+            while (cin.fail()) {  // التحقق من إدخال رقم صحيح
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid input. Enter a number (1-4): ";
+                cin >> choice;
+            }
+
+            switch(choice) {
+                case 1:
+                    checkBalance();
+                    break;
+                case 2:
+                    deposit();
+                    break;
+                case 3:
+                    withdraw();
+                    break;
+                case 4:
+                    cout << "\nThank you for using the ATM. Goodbye!\n";
+                    break;
+                default:
+                    cout << "Invalid choice. Please try again.\n";
+            }
+        } while(choice != 4);
+    }
+
+
 };
 
 
