@@ -156,6 +156,8 @@ string userPIN;
     cout << "Set your initial balance: $";
     cin >> initialBalance;
 
+    ATM myATM(userPIN, initialBalance);
+    myATM.run();
 
     return 0;
 }
