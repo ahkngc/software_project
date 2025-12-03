@@ -50,7 +50,35 @@ void showMenu() {
     }
 
 
+
+
+
+
+
+
+
+void deposit() {
+        double amount;
+        cout << "\nEnter amount to deposit: $";
+        cin >> amount;
+
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposit successful!\n";
+            cout << "New balance: $" << balance << "\n";
+        } else {
+            cout << "Invalid amount. Deposit canceled.\n";
+        }
+        cout << "Press enter to continue...";
+        cin.ignore();
+        cin.get();
+    }
+
+
 };
+
+
+
 
 
 
